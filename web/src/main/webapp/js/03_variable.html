@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+</head>
+<body>
+	<h1>자바스트립트 변수</h1>
+	<hr>
+	<p>자바스트립트는 변수를 선언하지 않아도 사용 가능하지만 변수를 선언하여 사용하는 것을 권장</p>
+	<p>형식)var 변수명=초기값</p>
+	<p>변수는 저장값에 따라 자료형이 자동으로 변화</p> 
+	
+	<script type="text/javascript">
+		/*
+		var num;//변수에 저장된 값이 없는 변수의 자료형은 [undefined]로 자동 설정
+		//alert("num = "+num);
+		
+		num=10;//변수의 자료형 : number
+		//alert("num = "+num);
+		
+		num="10";//변수의 자료형 : string
+		//alert("num = "+num);
+		
+		//동일한 이름의 변수 선언 가능
+		var num=100;
+		//alert("num = "+num);
+		
+		//변수는 선언하지 않아도 사용 가능
+		su=200;
+		//alert("su = "+su);
+		
+		//값이 저장되어 있지 않은 미선언된 변수 사용시 에러 발생
+		alert("number = "+number);
+		*/
+		
+		/*
+		//var 키워드를 사용하여 변수 선언 - 변수값 변경이 가능하며 재선언 가능
+		var num=100;
+		//alert("num = "+num);
+		
+		//num=200;
+		var num=200;
+		alert("num = "+num);
+		*/
+		
+		/*
+		//let 키워드를 사용하여 변수 선언 - 변수값 변경이 가능하며 재선언 불가능
+		let num=100;
+		//alert("num = "+num);
+		
+		//num=200;
+		let num=200;//동일한 이름의 변수 선언시 에러 발생
+		alert("num = "+num);
+		*/
+		
+		/*
+		//const 키워드를 사용하여 변수 선언 - 변수값 변경이 불가능하며 재선언 불가능
+		// => const 키워드는 상수(Constant)를 선언할 경우 사용
+		const num=100;//상수
+		//alert("num = "+num);
+		
+		//num=200;
+		const num=200;
+		alert("num = "+num);
+		*/
+		
+		//var 변수는 함수를 기준으로 영역이 표현되지만 let 변수와 const 변수는 블럭을 기준으로 영역 표현
+		{//블럭 기호를 이용하여 영역 구분
+			var num1=100;//블럭 외부에서 사용 가능
+			let num2=200;//블럭 외부에서 사용 불가능
+			const num3=300;//블럭 외부에서 사용 불가능
+		}
+		
+		//alert(num1);
+		//alert(num2);
+		alert(num3);
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

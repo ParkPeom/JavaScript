@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS</title>
+<style type="text/css">
+#container {
+	width: 90%;
+	/* margin 속성에 auto 속성값을 설정한 경우 블럭 레벨의 박스모델을 가운데 배치 */
+	/* => 블럭 레벨의 박스모델을 폭을 변경한 경우에만 사용 */
+	margin: 0 auto;
+	border: 1px solid black;
+}
+
+article {
+	width: 70%;
+	background: #772;
+	/* float : 박스모델 배치 방향 관련 스타일 속성 */
+	/* => 블럭 레벨의 박스모델 폭을 변경한 경우에만 사용 */
+	/* 속성값 : none(기본), left(박스모델을 왼쪽에서 오른쪽 방향으로 차례대로 배치)
+	, right(박스모델을 오른쪽에서 왼쪽 방향으로 차례대로 배치) */
+	float: left;
+}
+
+aside {
+	width: 23%;
+	background: #def;
+	height: auto;
+	float: right;
+}
+
+footer {
+	/* clear : float 속성에 대한 초기화 설정 관련 스타일 속성 */
+	/* 속성값 : none(기본), left, right, both(left & right) */
+	clear: both;
+	padding: 30px 10px;
+	background: #030;
+	color: #fff;
+	text-align: center;
+} 
+
+</style>
+</head>
+<body>
+<div id="container">
+	<header>
+		<h1>박스모델 배치 관련 스타일 속성</h1>
+	</header>
+	
+	<section>
+		<article>
+			<h3>예약방법 및 요금</h3>
+			<p>예약은 알아서 하시고 요금은 많이 주세요.</p>
+			<p>예약은 알아서 하시고 요금은 많이 주세요.</p>
+			<p>예약은 알아서 하시고 요금은 많이 주세요.</p>
+			<p>예약은 알아서 하시고 요금은 많이 주세요.</p>
+			<p>예약은 알아서 하시고 요금은 많이 주세요.</p>
+			<p>예약은 알아서 하시고 요금은 많이 주세요.</p>
+			<p>예약은 알아서 하시고 요금은 많이 주세요.</p>
+			<p>예약은 알아서 하시고 요금은 많이 주세요.</p>
+			<p>예약은 알아서 하시고 요금은 많이 주세요.</p>
+			<p>예약은 알아서 하시고 요금은 많이 주세요.</p>
+		</article>
+		<aside>
+			<img alt="" src="images/1.jpg">
+			<img alt="" src="images/2.jpg">
+			<img alt="" src="images/3.jpg">
+		</aside>
+	</section>
+	
+	<footer>
+		<address>홍길동(abc123@itwill.xyz)</address>
+	</footer>
+</div>	
+</body>
+</html>

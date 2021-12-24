@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS</title>
+<style type="text/css">
+div {
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 2px solid red;
+}
+
+/* display : 박스모델 배치 관련 스타일 속성 - 속성값 : none, block, inline 등 */
+/* => none 속성값은 박스모델을 배치하지 않아 출력되지 않도록 설정 - 박스모델 미존재 */
+.on { display: inline; }
+.off { display: none; }
+
+/* visibility : 박스모델 출력 관련 스타일 속성 - 속성값 : visible(보임), hidden(숨김) */
+.show { visibility: visible; }
+.hide { visibility: hidden; }
+</style>
+</head>
+<body>
+	<h1>박스모델 배치 관련 스타일 속성</h1>
+	<hr>
+	<div>
+		<img alt="" src="images/1.jpg" class="on">
+		<img alt="" src="images/2.jpg" class="off">
+		<img alt="" src="images/3.jpg" class="on">
+	</div>
+	<div>
+		<img alt="" src="images/1.jpg" class="show">
+		<img alt="" src="images/2.jpg" class="hide">
+		<img alt="" src="images/3.jpg" class="show">
+	</div>
+</body>
+</html>

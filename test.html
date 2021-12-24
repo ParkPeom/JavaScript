@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="http://127.0.0.1:5500/test2.html" method="post">
+      아이디 :
+      <input type="text" placeholder="아이디를 입력해주세요" /> 비밀번호 :
+      <input type="password" placeholder="비밀번호를 입력해주세요" />
+      <button type="submit">로그인</button>
+      <form>
+        <label>
+          <!--인라인 요소의 라벨 기능의 제목-->
+          <input type="checkbox" /> Apple
+        </label>
+        <label> <input type="checkbox" checked /> Banana </label>
+        <label>
+          <!--사용자에게 체크 여부를 그룹에서 1개만 입력받음 -->
+          <input type="radio" name="fruits" /> Carrot
+        </label>
+        <label> <input type="radio" name="fruits" /> marron </label>
+
+        <table border="1">
+          <tr>
+            <!-- table row 행 -->
+            <td>A</td>
+            <!-- 데이터 Column 열을 지정하는 요소(Table Data) -->
+            <td>B</td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td>D</td>
+          </tr>
+        </table>
+      </form>
+    </form>
+  </body>
+</html>

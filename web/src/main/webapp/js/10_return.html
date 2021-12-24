@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+</head>
+<body>
+	<h1>Return</h1>
+	<hr>
+	<p>함수를 종료하기 위한 명령 - 함수 내부값을 반환하는 기능 제공</p>
+	
+	<script type="text/javascript">
+		function sum(num1, num2) {
+			if(isNaN(num1) || isNaN(num2)) {
+				alert("매개변수에는 숫자값만 전달 가능합니다.");
+				return;//함수 종료
+			}
+			
+			return num1+num2;//함수를 종료하면 함수를 호출 명령으로 값 반환
+		}
+		
+		//함수를 호출하여 반환되는 값을 변수에 저장
+		//var tot=sum(10, 20);
+		//alert("합계 = "+tot);
+	
+		//alert("합계 = "+sum(10, 20));
+		
+		//함수 호출시 반환값이 없는 경우 반환값을 사용하면 [undefined] 자료형으로 처리
+		alert("합계 = "+sum("abc", 20));
+	</script>
+</body>
+</html>

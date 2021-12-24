@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS</title>
+<style type="text/css">
+div {
+	width: 500px;
+	height: 300px;
+	border: 1px solid black;
+	margin-bottom: 20px;
+}
+
+/* background 속성값으로 linear-gradient 함수 사용 */
+/* linear-gradient : 엘리먼트에 선형 그라데이션 효과를 제공하는 함수 */
+/* 그라데이션(Gradiention) 효과 : 색이 일정하게 변화되어 출력되는 효과 */
+/* 형식)linear-gradient(진행방향, 시작색, 종료색) */
+/* => 진행방향 : 각도(deg), 키워드(to left,to right,to top,to bottom) */
+.grad1 {
+	background: linear-gradient(45deg, red, white);
+	background: linear-gradient(135deg, blue, white);
+	background: linear-gradient(to bottom, green, white);
+	background: linear-gradient(to left, yellow, white);
+
+	/* 시작색 뒤에 중간색 표현 가능 - 중간색에 백분율 사용 */
+	background: linear-gradient(225deg, olive, white 30%, olive);
+	/* 중간색에 백분율이 생략된 경우 자동으로 50%로 처리 */
+	background: linear-gradient(to right, yellow, orange, red);
+}
+
+/* background 속성값으로 radial-gradient 함수 사용 */
+/* radial-gradient : 엘리먼트에 원형 그라데이션 효과를 제공하는 함수 */
+/* 형식)radial-gradient(모양, 시작색, 종료색) */
+/* => 모양 : circle, ellipse */
+/* => 시작색의 중심위치는 박스모델의 가운데로 설정 */
+/* => 시작색의 중심위치 변경 가능 - 특정 브라우저에서만 동작 */
+.grad2 {
+	background: radial-gradient(circle, white, blue);
+	
+	/* CSS 표준규약에 정의되어 있지 않고 특정 브라우저에서만 사용 가능한 스타일 속성 존재 */
+	/* => 브라우저 엔진 접두사를 붙여 만든 스타일 속성 사용 */
+	/* -webkit- : 웹킷 방식의 브라우저 - 크롬, 사파리 등 */
+	/* -moz- : 게코 방식의 브라우저 - 파이어폭스, 모질라 등 */
+	/* -o- : 오페라 방식의 브라우저 - 오페라 등 */
+	/* -ms- : 트라이던트 방식의 브라우저 - IE 등 */
+	background: -webkit-radial-gradient(70% 70%, circle, white, green);
+	background: radial-gradient(ellipse, white, yellow 30%, orange);
+	background: radial-gradient(ellipse, blue, aqua, white);
+}
+</style>
+</head>
+<body>
+	<h1>배경 관련 스타일 속성</h1>
+	<hr>
+	<div class="grad1"></div>
+	<div class="grad2"></div>
+</body>
+</html>

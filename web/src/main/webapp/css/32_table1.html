@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS</title>
+<style type="text/css">
+table {
+	border: 1px solid red;
+	
+	/* 테이블의 폭 변경 - 셀의 폭이 태그내용에 의해 순차적으로 자동 변경 */
+	/* => 태그내용이 셀의 폭보다 큰 경우 자동 줄바꿈 발생 - 테이블 폭 미변경  */
+	width: 300px;
+	
+	/* 테이블의 높이 변경 - 셀의 높이가 태그내용에 의해 순차적으로 자동 변경 */
+	/* => 셀의 태그내용에 맞게 높이 변경 - 테이블 높이 변경 */
+	height: 50px;
+	
+	/* table-layout : 테이블 구조 관련 스타일 속성 */
+	/* 속성값 : auto(기본 - 셀의 폭과 높이가 자동 설정), fixed(셀의 폭과 높이가 고정) */
+	/* table-layout 속성값이 fixed 설정된 경우 폭을 변경하지 않으면 테이블 폭을 기준으로 셀의 
+	폭이 균등하게 설정 */
+	/* => 셀에 출력될 태그내용 중 하나의 단어가 셀의 폭보다 큰 경우 셀을 벗어난 출력 */
+	table-layout: fixed;
+	
+	/* word-break : 셀의 폭보다 큰 단어의 처리 관련 스타일 속성 */
+	/* 속성값 : keep-all(기본 - 단어가 셀을 벗어나 출력), break-all(단어가 셀을 벗어나지 않아도 자동 줄바꿈) */
+	word-break: break-all;
+}
+
+th, td {
+	border: 1px solid green;
+}
+</style>
+</head>
+<body>
+	<h1>테이블 관련 스타일 속성</h1>
+	<hr>
+	<table>
+		<tr>
+			<!-- 테이블의 열(셀-Cell)은 태그내용에 의해 셀의 폭 자동 설정 >> 셀의 폭 합계 = 테이블 폭 -->
+			<th>CONSTRAINT_VALIDAION</th>
+			<td>테이블 크기 관련 스타일 속성과 속성값</td>
+		</tr>
+	</table>
+</body>
+</html>

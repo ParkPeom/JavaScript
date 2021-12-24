@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+</head>
+<body>
+	<h1>전역변수와 지역변수</h1>
+	<hr>
+	<p>전역변수(Global Variable) : 함수 외부에서 선언된 변수
+	- 전역변수는 모든 함수에서 사용 가능</p>
+	<p>지역변수(Local Variable) : 함수 내부에서 선언된 변수
+	- 지역변수는 선언된 함수에서만 사용 가능</p>
+	
+	<script type="text/javascript">
+		var glovalVar=100;//전역변수 - 모든 함수에서 사용 가능
+		
+		function display1() {
+			//alert("display1 함수의 glovalVar 변수값 = "+glovalVar);
+			
+			glovalVar=200;//전역변수 변경 가능
+			
+			//var localVar=300;//지역변수 - 선언된 함수가 종료되면 자동 소멸
+			//alert("display1 함수의 localVar 변수값 = "+localVar);
+			
+			//변수를 선언하지 않은 경우 전역변수로 처리
+			variable=400;//전역변수
+			//alert("display1 함수의 variable 변수값 = "+variable);
+		}
+		
+		function display2() {
+			//alert("display2 함수의 glovalVar 변수값 = "+glovalVar);
+			
+			//다른 함수의 지역변수 사용 불가능 - 에러 발생 
+			//alert("display2 함수의 localVar 변수값 = "+localVar);
+			
+			alert("display2 함수의 variable 변수값 = "+variable);
+		}
+		
+		display1();
+		display2();
+	</script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+<!-- CSL(Client Script Language) : 클라이언트의 브라우저 엔진에 의해 해석되어 실행되는 언어 -->
+<!-- => HTML, CSS, JavaScript -->
+<!-- Web Document Reading >> HTML Parsing(DOM Parser - DOM Tree) >> JavaScipt 실행 
+>> CSS Style 적용 >> HTML Rendering(페이지 출력) - 이벤트 발생 : 등록된 이벤트 핸들러(JavaScipt) 실행 -->
+
+<!-- 자바스트립트 자동 완성 기능을 제공받기 위해 Tern 플러그인 설치  -->
+<!-- Help >> Eclipse Marketplace >> search : tern 검색 >> Tern Eclipse IDE 설치 -->
+
+<!-- 프로젝트에서 Tern 플러그인의 자바스트립트 자동 완성 기능 사용법 -->
+<!-- Project >> 오른쪽 버튼 >> Configure >> Convert to Tern Project >> Modules : Browser와 jQuery 선택 >> Apply And Close --> 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+<!-- script 태그에 src 속성값으로 JavaScript Source File의 URL 주소를 설정하여 
+JavaScript Source File의 자바스크립트 명령을 HTML 문서에 포함하여 사용 -->
+<script type="text/javascript" src="01_hello.js"></script>
+
+<!-- script 태그 : 스크립트 언어를 사용하여 프로그램 작성하는 영역 제공 -->
+<!-- => script 태그가 여러개 선언된 경우 순차적으로 실행 -->
+<script type="text/javascript">
+	//자바스트립트 주석문은 자바와 동일
+	
+	//자바스트립트는 한 줄에 작성된 코드를 하나의 명령으로 인식하여 처리
+	// => 명령 마지막에 ; 생략 가능
+	
+	//자바스크립트는 객체 지향 프로그래밍으로 객체를 이용하여 프로그램의 작성하며 객체의 
+	//속성(Property)과 메소드(Method)를 사용하여 프로그램 작성
+	
+	//자바스크립트는 브라우저를 window 객체로 표현하여 속성과 메소드 제공
+	//window.alert(message) : 메세지창(경고창)을 생성하여 메세지를 출력하는 메소드
+	// => window 객체 표현 생략 가능
+	//window.alert("Hello, JavaScript!!!")
+	//alert("Hello, JavaScript!!!");
+	
+	alert("head 태그에 작성된 자바스크립트 명령");
+</script>
+</head>
+<body>
+	<!--  
+	<script type="text/javascript">
+		alert("body 태그에 작성된 자바스크립트 명령")		
+	</script>
+	-->
+	<h1>자바스크립트 작성</h1>
+	<hr>
+	
+	<!-- 태그의 onXXX 속성(이벤트 속성)에 속성값으로 이벤트 처리 명령(JavaScript) 작성 -->
+	<!-- 형식) onXXX="javascript:자바스트립트 명령; 자바스트립트 명령; ...; " -->
+	<!-- => javascript 영역(NameSpace) 표현 생략 가능 -->
+	<button type="button" onclick="alert('자바스트립트로 작성된 이벤트 처리 명령');">메세지 버튼</button>
+	
+	<!-- 웹문서의 DOM Tree를 조작하는 경우 body 태그의 마지막 자식 태그로 script 태그를 선언하는 것을 권장  -->
+	<script type="text/javascript">
+		alert("body 태그에 작성된 자바스크립트 명령")		
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS</title>
+
+<!-- 구글에서 제공하는 웹폰트 : https://fonts.google.com 사이트 참조 -->
+<!-- => link 태그 또는 style 태그의 @import 속성을 사용하여 구글에서 제공하는 웹폰트 사용 가능 -->
+<!-- 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+-->
+ 
+<style type="text/css">
+/* @import : CSS 파일을 현재 웹문서의 CSS 스타일로 포함하는 시스템 속성 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+/* 웹폰트(WebFont) : 인터넷에 존재하는 글꼴파일을 클라이언트에게 제공하여 사용 */
+
+/* 웹폰트로 사용할 수 있는 글꼴파일 */
+/* 1.ttf 파일 : 플렛폼(OS)에서 사용하는 글꼴파일 */
+/* 2.woff 파일 : 웹에서 사용하는 글꼴파일 - IE9 이상, 크롬, 사파리, 파이어폭스 등 */
+/* 3.eof 파일 : 웹에서 사용하는 글꼴파일 - IE8 이하, 크롬, 사파리, 파이어폭스 등 */
+
+/* @font-face : 글꼴파일을 클라이언트에게 제공하기 위한 시스템 속성 */
+/* => font-family 속성 : 글꼴파일의 식별자(글꼴명)을 속성값으로 설정 */
+/* => src 속성 : url 함수를 이용하여 글꼴파일의 URL 주소를 속성값으로 설정 */
+@font-face {
+	font-family: "NanumGothic";
+	src: url("/web/css/fonts/NanumGothic.woff");
+}
+
+@font-face {
+	font-family: "NanumBarunGothic";
+	src: url("/web/css/fonts/NanumBarunGothic.woff");
+}
+
+body {
+	/* font-family: "NanumGothic"; */
+	/* font-family: "NanumBarunGothic"; */
+	font-family: "Nanum Gothic";
+}
+</style>
+</head>
+<body>
+	<h1>글꼴 관련 스타일 속성</h1>
+	<hr>
+	<p>브라우저에 출력될 아주 중요한 내용입니다.</p>
+	<p>브라우저에 출력될 아주 중요한 내용입니다.</p>
+	<p>브라우저에 출력될 아주 중요한 내용입니다.</p>
+	<p>브라우저에 출력될 아주 중요한 내용입니다.</p>
+	<p>브라우저에 출력될 아주 중요한 내용입니다.</p>
+</body>
+</html>
